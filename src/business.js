@@ -1,8 +1,19 @@
 
-export default class PizzaOrder {
-  constructor(size,toppings) {
+export default function PizzaOrder(size, toppings) {
     this.size = size;
     this.toppings = toppings;
-    this.baseCost = 24;
   }
-};
+
+  PizzaOrder.prototype.pizzaCost = function() {
+    let baseCost = 0;
+    if (this.size === "medium") {
+      baseCost = 24;
+    } else if (this.size === "large") {
+      baseCost = 29;
+    } else {
+
+    }
+    return baseCost;
+  };
+
+
