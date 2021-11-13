@@ -11,23 +11,22 @@ describe('PizzaOrder', () => {
 
   test('should correctly return the updated cost', () => {
     const myPizza = new PizzaOrder("large", ["mushroom","olives"]);
-    expect(myPizza.pizzaCost()).toEqual(29);
+    expect(myPizza.pizzaCost()).toEqual(31.50);
   });
 
   test('should correctly return toppings cost', () => {
     const myPizza = new PizzaOrder("large", ["mushroom","olives"]);
-    expect(myPizza.addToppings()).toEqual(2.5);
+    expect(myPizza.addToppings()).toEqual(2.50);
   });
-
   
 
+  test('should correctly return total pizza cost', () => {
+    const myPizza = new PizzaOrder("large", ["mushroom","olives"]);
+    const myPizza2 = new PizzaOrder("medium", ["pineapple", "spinach", "peppers"])
+    expect(myPizza.pizzaCost()).toEqual(31.50);
   });
- 
-  /*test('should correctly refactor mercuryYears to work for all planets', () => {
-    const myYears = new SolarYears(41,85);
-    let this.planet = this.mercury;
-    expect(myYears.onAnotherPlanetAge()).toEqual(171); 
-});*/
+});
+
 
 
 //   git add _tests_/test.js src/business.js

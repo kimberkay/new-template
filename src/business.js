@@ -17,7 +17,7 @@ export default function PizzaOrder(size, toppings) {
       baseCost = 29;
     } else {
     }
-    return baseCost;
+    return baseCost + this.addToppings();
   
   };
 
