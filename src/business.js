@@ -4,6 +4,11 @@ export default function PizzaOrder(size, toppings) {
     this.toppings = toppings;
   }
 
+  PizzaOrder.prototype.addToppings = function() {
+    let toppingsCost = this.toppings.length * 1.25;
+    return toppingsCost;
+  }
+
   PizzaOrder.prototype.pizzaCost = function() {
     let baseCost = 0;
     if (this.size === "medium") {
@@ -11,9 +16,9 @@ export default function PizzaOrder(size, toppings) {
     } else if (this.size === "large") {
       baseCost = 29;
     } else {
-
     }
     return baseCost;
+  
   };
 
 

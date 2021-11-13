@@ -14,6 +14,13 @@ describe('PizzaOrder', () => {
     expect(myPizza.pizzaCost()).toEqual(29);
   });
 
+  test('should correctly return toppings cost', () => {
+    const myPizza = new PizzaOrder("large", ["mushroom","olives"]);
+    expect(myPizza.addToppings()).toEqual(2.5);
+  });
+
+  
+
   });
  
   /*test('should correctly refactor mercuryYears to work for all planets', () => {
@@ -21,3 +28,6 @@ describe('PizzaOrder', () => {
     let this.planet = this.mercury;
     expect(myYears.onAnotherPlanetAge()).toEqual(171); 
 });*/
+
+
+//   git add _tests_/test.js src/business.js
